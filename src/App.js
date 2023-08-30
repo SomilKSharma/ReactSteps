@@ -8,6 +8,13 @@ const messages = [
 export default function App() {
   // variable for steps
   const steps = 2
+  // create event handler functions
+  function handlePrevious() {
+    alert('Previous')
+  }
+  function handleNext() {
+    alert('Next')
+  }
   // return the jsx
   return (
     <div className="steps">
@@ -30,14 +37,13 @@ export default function App() {
       <div className="buttons">
         <button
           style={{ backgroundColor: "#7950f2", color: "#fff" }}
-          onClick={() => alert('Previous')}
+          onClick={handlePrevious}
         >
           Previous
         </button>
         <button
           style={{ backgroundColor: "#7950f2", color: "#fff" }}
-          onClick={() => alert('Next')}
-          onMouseEnter={() => alert('Mouse hover')}
+          onClick={handleNext}
         >
           Next
         </button>
