@@ -10,7 +10,7 @@ export default function App() {
   const steps = 2
   // create event handler functions
   function handlePrevious() {
-    alert('Previous')
+    steps
   }
   function handleNext() {
     alert('Next')
