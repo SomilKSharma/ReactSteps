@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 // Array
 const messages = [
   "Learn React ⚛️",
@@ -6,26 +8,33 @@ const messages = [
 ];
 
 export default function App() {
-  // variable for steps
-  const steps = 2
+  // create a state variable / hook
+  const [steps, setStep] = useState(1)
+
   // create event handler functions
   function handlePrevious() {
-    steps
+    // check for range
+    if (steps > 1) {
+      setStep(steps - 1)
+    }
   }
   function handleNext() {
-    alert('Next')
+    // update the state
+    if (steps < 3) {
+      setStep(steps + 1)
+    }
   }
   // return the jsx
   return (
     <div className="steps">
       <div className="numbers">
-        <div className={`${steps === 1 ? "active" : ""}`}>
+        <div className={steps === 1 ? "active" : ""}>
           1
         </div>
-        <div className={`${steps === 2 ? "active" : ""}`}>
+        <div className={steps === 2 ? "active" : ""}>
           2
         </div>
-        <div className={`${steps === 3 ? "active" : ""}`}>
+        <div className={steps === 3 ? "active" : ""}>
           3
         </div>
       </div>
