@@ -27,8 +27,12 @@ export default function App() {
   }
   // return the jsx
   return (
-    <div>
-      <button className="close" onClick={() => setIsOpen(!isOpen)}>&times;</button>
+    <>
+      {/* a button */}
+      <button className="close" onClick={() => setIsOpen(!isOpen)}>&times;
+      </button>
+
+      {/* The box of the view page */}
       {
         (isOpen) && (
           <div className="steps">
@@ -65,6 +69,6 @@ export default function App() {
           </div>
         )
       }
-    </div>
+    </>
   )
 }
