@@ -16,13 +16,13 @@ export default function App() {
   function handlePrevious() {
     // check for range
     if (steps > 1) {
-      setSteps(steps - 1)
+      setSteps((steps) => steps - 1)
     }
   }
   function handleNext() {
     // update the state
     if (steps < 3) {
-      setSteps(steps + 1)
+      setSteps((steps) => steps + 1)
     }
   }
   // return the jsx
